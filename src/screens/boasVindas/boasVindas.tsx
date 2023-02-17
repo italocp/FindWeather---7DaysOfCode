@@ -1,5 +1,6 @@
 import React from "react";
 import { Image } from "react-native";
+import Button from "../../components/button";
 
 import { Container, Title, Text, BoldText } from "./styles";
 
@@ -10,8 +11,9 @@ function boasVindas() {
       <Title>Descubra o clima{"\n"}na sua cidade</Title>
       <Text>
         Com o <BoldText>FindWeather</BoldText> nunca{"\n"}ficou tão fácil ter a
-        previsão do{"\n"}tempo na palma da sua mão{" "}
+        previsão do{"\n"}tempo na palma da sua mão
       </Text>
+      <Button Text="Iniciar" />
     </Container>
   );
 }
