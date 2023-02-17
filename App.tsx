@@ -1,16 +1,23 @@
-import { StatusBar, Text, View } from "react-native";
+import React from "react";
+import { StatusBar } from "react-native";
+import { ThemeProvider } from "styled-components";
+import theme from "./src/theme/styles/Global/theme";
 import {
   useFonts,
   Overpass_400Regular,
   Overpass_600SemiBold,
   Overpass_700Bold,
+  Overpass_300Light,
 } from "@expo-google-fonts/overpass";
 
+import BoasVindas from "./src/screens/boasVindas/boasVindas";
+
 export default function App() {
-  let [fontsLoaded] = useFonts({
+  const [fontsLoaded] = useFonts({
     Overpass_400Regular,
     Overpass_600SemiBold,
     Overpass_700Bold,
+    Overpass_300Light,
   });
 
   if (!fontsLoaded) {
@@ -20,24 +27,9 @@ export default function App() {
   return (
     <>
       <StatusBar barStyle="default" />
-      <View
-        style={{
-          flex: 1,
-          justifyContent: "center",
-          alignItems: "center",
-          backgroundColor: "#1B1D22",
-        }}
-      >
-        <Text
-          style={{
-            fontFamily: "Overpass_400Regular",
-            fontSize: 30,
-            color: "#fff",
-          }}
-        >
-          Hello Word!
-        </Text>
-      </View>
+      <ThemeProvider theme={theme}>
+        <BoasVindas />
+      </ThemeProvider>
     </>
   );
 }
