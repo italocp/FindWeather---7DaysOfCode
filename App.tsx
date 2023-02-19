@@ -2,6 +2,9 @@ import React from "react";
 import { StatusBar } from "react-native";
 import { ThemeProvider } from "styled-components";
 import theme from "./src/theme/styles/Global/theme";
+
+import Routes from "./src/routes";
+
 import {
   useFonts,
   Overpass_400Regular,
@@ -9,8 +12,6 @@ import {
   Overpass_700Bold,
   Overpass_300Light,
 } from "@expo-google-fonts/overpass";
-
-import BoasVindas from "./src/screens/boasVindas/boasVindas";
 
 export default function App() {
   const [fontsLoaded] = useFonts({
@@ -28,7 +29,7 @@ export default function App() {
     <>
       <StatusBar barStyle="default" />
       <ThemeProvider theme={theme}>
-        <BoasVindas />
+        <Routes />
       </ThemeProvider>
     </>
   );
