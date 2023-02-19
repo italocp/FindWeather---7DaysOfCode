@@ -1,22 +1,12 @@
 import styled from 'styled-components/native';
+import { ButtonProps } from '.'
 
-export const Container = styled.TouchableOpacity`
-  width: 328px;
-  height: 54px;
-  background-color: ${({ theme }) => theme.colors.dark300};
-
-  
-  align-items: center;
+export const Buttons = styled.TouchableOpacity<ButtonProps>`
+  background-color: ${({ backgroundColor }) => backgroundColor};
+  border-color: ${({ borderColor }) => borderColor};
+  border-width: ${({ borderColor }) => borderColor && 1}px;
+  border-radius: ${({ borderRadius }) => borderRadius}px;
+  height: ${({ height }) => height}px;
+  width: ${({ width }) => width}px;
   justify-content: center;
-
-  border-radius: 18px;
-  border-color: ${({ theme }) => theme.colors.gray300};
-  border-width: 1px;
-`;
-
-export const Title = styled.Text`
-  color: ${({ theme }) => theme.colors.white} ;
-  font-family: ${({ theme }) => theme.fonts.Overpass_400};
-  font-size: 22px;
-  font-weight: 400;
 `;

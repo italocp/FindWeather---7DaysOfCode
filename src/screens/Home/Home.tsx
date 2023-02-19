@@ -7,7 +7,7 @@ function Home({ navigation }) {
   return (
     <Container>
       <Text>test</Text>
-      <Button Text="Go Back" onPress={() => navigation.navigate("Welcome")} />
+      <Button onPress={() => navigation.navigate("Welcome")} />
     </Container>
   );
 }

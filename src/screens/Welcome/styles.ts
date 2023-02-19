@@ -20,7 +20,7 @@ export const Title = styled.Text`
   margin-bottom: 33px;
 `;
 
-export const Text = styled.Text`
+export const Text2 = styled.Text`
   font-family: ${({ theme }) => theme.fonts.Overpass_400};
   font-size: 22px;
   font-weight: 400;
@@ -38,3 +38,9 @@ export const BoldText = styled.Text`
   text-align: center;
 `;
 
+export const Title2 = styled.Text`
+  color: ${({ theme }) => theme.colors.white} ;
+  font-family: ${({ theme }) => theme.fonts.Overpass_400};
+  font-size: 22px;
+  font-weight: 400;
+`;
