@@ -2,6 +2,7 @@ import React from "react";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
 import Welcome from "../../screens/Welcome/Welcome";
+import Home from "../../screens/Home/Home";
 
 export type StackProps = {
   Welcome: undefined;
@@ -17,6 +18,7 @@ export default function MyStack() {
       screenOptions={{ headerShown: false }}
     >
       <Screen name="Welcome" component={Welcome} />
+      <Screen name="Home" component={Home} />
     </Navigator>
   );
 }

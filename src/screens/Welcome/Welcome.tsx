@@ -4,7 +4,7 @@ import Button from "../../components/button";
 
 import { Container, Title, Text, BoldText } from "./styles";
 
-function Welcome() {
+function Welcome({ navigation }) {
   return (
     <Container>
       <Image source={require("../../assets/cloud-and-thunder.png")} />
@@ -13,7 +13,7 @@ function Welcome() {
         Com o <BoldText>FindWeather</BoldText> nunca{"\n"}ficou tão fácil ter a
         previsão do{"\n"}tempo na palma da sua mão
       </Text>
-      <Button Text="Iniciar" />
+      <Button Text="Iniciar" onPress={() => navigation.navigate("Home")} />
     </Container>
   );
 }

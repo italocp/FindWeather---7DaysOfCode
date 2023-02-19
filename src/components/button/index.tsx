@@ -3,11 +3,12 @@ import { Container, Title } from "./styles";
 
 type Props = {
   Text: string;
+  onPress(): void;
 };
 
-function Button({ Text }: Props) {
+function Button({ Text, onPress }: Props) {
   return (
-    <Container>
+    <Container onPress={onPress}>
       <Title>{Text}</Title>
     </Container>
   );
