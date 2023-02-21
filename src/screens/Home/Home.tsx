@@ -1,16 +1,18 @@
+import { Ionicons } from "@expo/vector-icons";
 import React from "react";
 import { Image } from "react-native";
 import Button from "../../components/button";
-import Text from "../../components/text";
 import Space from "../../components/space";
+import Text from "../../components/text";
 
-import { Container } from "./styles";
-import theme from "../../theme/styles/Global/theme";
 import Climate from "../../assets/climate-change.png";
+import Raining from "../../assets/raining.png";
+import theme from "../../theme/styles/Global/theme";
+import { Container, LocationContainer, TitleContainer } from "./styles";
 
-function Home({ navigation }) {
+const EmptyState = () => {
   return (
-    <Container>
+    <>
       <Space marginTop={74} />
       <Text
         fontFamily={theme.fonts.Overpass_400}
@@ -45,22 +47,50 @@ function Home({ navigation }) {
           Selecione aqui um local e{"\n"} encontre o clima em tempo real
         </Text>
       </Button>
-      {/* <Button
-        backgroundColor={theme.colors.dark400}
-        height={50}
-        width={100}
-        onPress={() => navigation.navigate("Welcome")}
+    </>
+  );
+};
+
+function Home({ navigation }) {
+  return (
+    <Container>
+      {/* <EmptyState /> */}
+      <Space marginTop={49} />
+      <LocationContainer>
+        <Ionicons name="location-sharp" size={24} color={theme.colors.white} />
+        <TitleContainer>
+          <Text
+            color={theme.colors.white}
+            fontFamily={theme.fonts.Overpass_400}
+            fontWeight={400}
+            fontSize={18}
+            textAlign="center"
+          >
+            Brasília, Brasil
+          </Text>
+          <Text
+            color={theme.colors.gray100}
+            fontFamily={theme.fonts.Overpass_400}
+            fontWeight={400}
+            fontSize={16}
+            textAlign="center"
+          >
+            Domingo, 01 jan de 2023
+          </Text>
+        </TitleContainer>
+      </LocationContainer>
+      <Space marginTop={43} />
+      <Image source={Raining} />
+      <Space marginTop={10} />
+      <Text
+        color={theme.colors.white}
+        fontFamily={theme.fonts.Overpass_700}
+        fontWeight={700}
+        fontSize={76}
+        textAlign="center"
       >
-        <Text
-          color={theme.colors.white}
-          fontFamily={theme.fonts.Overpass_600}
-          fontSize={23}
-          fontWeight={600}
-          textAlign="center"
-        >
-          test
-        </Text>
-      </Button> */}
+        23º
+      </Text>
     </Container>
   );
 }

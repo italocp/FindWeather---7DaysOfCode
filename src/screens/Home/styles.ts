@@ -7,3 +7,12 @@ export const Container = styled.View`
   background-color: ${({ theme }) => theme.colors.dark};
 
 `;
+
+export const LocationContainer = styled.View`
+  flex-direction: row;
+  justify-content: center;
+`;
+
+export const TitleContainer = styled.View`
+  align-items: flex-start;
+`;
