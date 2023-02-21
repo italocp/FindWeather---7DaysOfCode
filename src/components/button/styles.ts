@@ -5,8 +5,8 @@ export const Buttons = styled.TouchableOpacity<ButtonProps>`
   background-color: ${({ backgroundColor }) => backgroundColor};
   border-color: ${({ borderColor }) => borderColor};
   border-width: ${({ borderColor }) => borderColor && 1}px;
-  border-radius: ${({ borderRadius }) => borderRadius}px;
-  height: ${({ height }) => height}px;
-  width: ${({ width }) => width}px;
+  border-radius: ${({ borderRadius }) => borderRadius || 1}px;
+  height: ${({ height }) => height || 10}px;
+  width: ${({ width }) => width || 10}px;
   justify-content: center;
 `;

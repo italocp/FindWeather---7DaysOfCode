@@ -4,6 +4,7 @@ import Button from "../../components/button";
 import Space from "../../components/space";
 import Text from "../../components/text";
 import theme from "../../theme/styles/Global/theme";
+import Cloud from "../../assets/cloud-and-thunder.png";
 
 import { Container, BoldText } from "./styles";
 
@@ -11,7 +12,7 @@ function Welcome({ navigation }) {
   return (
     <Container>
       <Space marginTop={137} />
-      <Image source={require("../../assets/cloud-and-thunder.png")} />
+      <Image source={Cloud} />
       <Space marginBottom={57} />
       <Text
         color={theme.colors.white}

@@ -5,11 +5,11 @@ import { Buttons } from "./styles";
 
 export interface ButtonProps extends TouchableOpacityProps {
   children: ReactNode;
-  backgroundColor: string;
+  backgroundColor?: string;
   borderColor?: string;
   borderRadius?: number;
   height?: number;
-  width?: number;
+  width: number;
 }
 
 function Button({
