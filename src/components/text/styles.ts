@@ -6,4 +6,5 @@ export const StyleText = styled.Text<TextType>`
   font-weight: ${({ fontWeight }) => fontWeight};
   font-family: ${({ fontFamily }) => fontFamily};
   color: ${({ color }) => color};
+  text-align: ${({ textAlign }) => textAlign};
 `;

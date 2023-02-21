@@ -9,18 +9,21 @@ export interface TextType extends TextProps {
   fontSize: number;
   fontWeight: number;
   color: string;
+  textAlign: "left" | "center" | "right";
 }
 
 function Text({
   color,
   children,
   fontFamily,
+  textAlign,
   fontSize,
   fontWeight,
   ...rest
 }: TextType) {
   return (
     <StyleText
+      textAlign={textAlign}
       color={color}
       fontFamily={fontFamily}
       fontSize={fontSize}

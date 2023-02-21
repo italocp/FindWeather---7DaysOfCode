@@ -10,12 +10,6 @@ export const Container = styled.View`
 `;
 
 export const Title = styled.Text`
-  font-family: ${({ theme }) => theme.fonts.Overpass_600};
-  font-size: 33px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.colors.white};
-  text-align: center;
-
   margin-top: 57px;
   margin-bottom: 33px;
 `;
