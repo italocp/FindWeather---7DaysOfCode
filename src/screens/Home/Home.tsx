@@ -94,10 +94,9 @@ const EmptyState = () => {
   );
 };
 
-function Home({ navigation }) {
+const CityState = () => {
   return (
-    <Container>
-      {/* <EmptyState /> */}
+    <>
       <Space marginTop={49} />
       <LocationContainer>
         <Ionicons name="location-sharp" size={24} color={theme.colors.white} />
@@ -162,6 +161,15 @@ function Home({ navigation }) {
       </TodayAndNext7daysContainer>
       <Space marginTop={21} />
       <CardHours data={dataCardHour} />
+    </>
+  );
+};
+
+function Home() {
+  return (
+    <Container>
+      {/* <EmptyState /> */}
+      <CityState />
     </Container>
   );
 }
