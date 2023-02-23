@@ -10,6 +10,11 @@ import CardHours from "../../components/cardHours";
 
 import Climate from "../../assets/climate-change.png";
 import Raining from "../../assets/raining.png";
+
+import DropMiniaturePNG from "../../assets/drop-miniature.png";
+import WindMiniaturePNG from "../../assets/wind-miniature.png";
+import RainingCloudPNG from "../../assets/raining-cloud-miniature.png";
+
 import theme from "../../theme/styles/Global/theme";
 import {
   Container,
@@ -17,6 +22,36 @@ import {
   TitleContainer,
   TodayAndNext7daysContainer,
 } from "./styles";
+
+const dataCardHour = [
+  {
+    id: 1,
+    icon: DropMiniaturePNG,
+    temperature: 23,
+    hour: "09:00",
+  },
+
+  {
+    id: 2,
+    icon: WindMiniaturePNG,
+    temperature: 18,
+    hour: "13:00",
+  },
+
+  {
+    id: 3,
+    icon: RainingCloudPNG,
+    temperature: 8,
+    hour: "17:00",
+  },
+
+  {
+    id: 4,
+    icon: RainingCloudPNG,
+    temperature: 8,
+    hour: "23:00",
+  },
+];
 
 const EmptyState = () => {
   return (
@@ -126,7 +161,7 @@ function Home({ navigation }) {
         </Button>
       </TodayAndNext7daysContainer>
       <Space marginTop={21} />
-      <CardHours />
+      <CardHours data={dataCardHour} />
     </Container>
   );
 }

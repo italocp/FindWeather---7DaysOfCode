@@ -3,6 +3,8 @@ import styled from 'styled-components/native';
 export const Container = styled.View`
   width: 360px;
   height: 95px;
+  flex-direction: row;
+  justify-content: space-around;
 `;
 
 export const HourContainer = styled.View`
@@ -18,8 +20,8 @@ export const HourContainer = styled.View`
   border-radius: 20px;
   border-color: ${({ theme }) => theme.colors.dark100};
 
-
-`
+  padding: 4px;
+`;
 
 export const TemperatureContainer = styled.View`
   flex-direction: row;
