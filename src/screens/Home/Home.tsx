@@ -5,6 +5,7 @@ import Button from "../../components/button";
 import Space from "../../components/space";
 import Text from "../../components/text";
 import Temperature from "../../components/temperature";
+import CardDay from "../../components/cardDay";
 
 import Climate from "../../assets/climate-change.png";
 import Raining from "../../assets/raining.png";
@@ -84,6 +85,8 @@ function Home({ navigation }) {
       <Image source={Raining} />
       <Space marginTop={10} />
       <Temperature />
+      <Space marginTop={45} />
+      <CardDay />
     </Container>
   );
 }
