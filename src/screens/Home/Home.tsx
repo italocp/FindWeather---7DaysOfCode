@@ -6,11 +6,17 @@ import Space from "../../components/space";
 import Text from "../../components/text";
 import Temperature from "../../components/temperature";
 import CardDay from "../../components/cardDay";
+import CardHours from "../../components/cardHours";
 
 import Climate from "../../assets/climate-change.png";
 import Raining from "../../assets/raining.png";
 import theme from "../../theme/styles/Global/theme";
-import { Container, LocationContainer, TitleContainer } from "./styles";
+import {
+  Container,
+  LocationContainer,
+  TitleContainer,
+  TodayAndNext7daysContainer,
+} from "./styles";
 
 const EmptyState = () => {
   return (
@@ -87,6 +93,40 @@ function Home({ navigation }) {
       <Temperature />
       <Space marginTop={45} />
       <CardDay />
+      <Space marginTop={43} />
+      <TodayAndNext7daysContainer>
+        <Text
+          fontFamily={theme.fonts.Overpass_400}
+          fontWeight={400}
+          fontSize={20}
+          color={theme.colors.white}
+          textAlign="left"
+        >
+          Hoje
+        </Text>
+        <Button
+          width={121}
+          height={30}
+          style={{ flexDirection: "row", alignItems: "center" }}
+        >
+          <Text
+            fontFamily={theme.fonts.Overpass_400}
+            fontWeight={500}
+            fontSize={16}
+            color={theme.colors.gray100}
+            textAlign="right"
+          >
+            Próximos 7 dias
+          </Text>
+          <Ionicons
+            name="chevron-forward"
+            color={theme.colors.gray100}
+            size={15}
+          />
+        </Button>
+      </TodayAndNext7daysContainer>
+      <Space marginTop={21} />
+      <CardHours />
     </Container>
   );
 }

@@ -16,3 +16,9 @@ export const LocationContainer = styled.View`
 export const TitleContainer = styled.View`
   align-items: flex-start;
 `;
+
+export const TodayAndNext7daysContainer = styled.View`
+  width: 328px;
+  flex-direction: row;
+  justify-content:space-between;
+`;
