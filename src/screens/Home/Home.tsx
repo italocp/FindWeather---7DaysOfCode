@@ -4,6 +4,7 @@ import { Image } from "react-native";
 import Button from "../../components/button";
 import Space from "../../components/space";
 import Text from "../../components/text";
+import Temperature from "../../components/temperature";
 
 import Climate from "../../assets/climate-change.png";
 import Raining from "../../assets/raining.png";
@@ -82,15 +83,7 @@ function Home({ navigation }) {
       <Space marginTop={43} />
       <Image source={Raining} />
       <Space marginTop={10} />
-      <Text
-        color={theme.colors.white}
-        fontFamily={theme.fonts.Overpass_700}
-        fontWeight={700}
-        fontSize={76}
-        textAlign="center"
-      >
-        23º
-      </Text>
+      <Temperature />
     </Container>
   );
 }
